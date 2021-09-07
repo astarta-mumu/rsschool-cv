@@ -1,1 +1,1 @@
-# rsschool-cv
+https://astarta-mumu.github.io/rsschool-cv/cv
