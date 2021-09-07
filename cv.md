@@ -2,10 +2,8 @@
 
 ## Contacts
 
-**Email**: [astarta.mumu@gmail.com](astarta.mumu@gmail.com)
-
-**Telegram**: [astarta_mumu](https://t.me/astarta_mumu)
-
+**Email**: [astarta.mumu@gmail.com](astarta.mumu@gmail.com)  
+**Telegram**: [astarta_mumu](https://t.me/astarta_mumu)  
 **GitHub**: [astarta-mumu](https://github.com/astarta-mumu)
 
 ## About myself
