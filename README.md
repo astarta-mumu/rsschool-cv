@@ -1,1 +1,1 @@
-https://astarta-mumu.github.io/rsschool-cv/cv
+https://astarta-mumu.github.io/rsschool-cv/
