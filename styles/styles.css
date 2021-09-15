@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s;
 }
 
 li {
@@ -31,12 +30,15 @@ button {
   --accent-color: #f6a383;
   --page-bg-color: #f5f8fc;
   --secondary-bg-color: --text-color;
+
   --font-size: 16px;
   --small-font-size: 0.75rem;
   --title-font-size: 2rem;
   --big-title-font-size: 3rem;
   --small-title-font-size: 1.25rem;
+
   --shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s;
   --page-padding: calc(50vw - 590px);
 }
 
@@ -98,6 +100,7 @@ body {
 .page-nav {
   display: flex;
   justify-content: flex-end;
+  transition: var(--transition);
 }
 
 @media (max-width: 992px) {
@@ -160,6 +163,7 @@ body {
 .link {
   position: relative;
   display: inline-block;
+  transition: var(--transition);
 }
 
 .link--hover::after {
@@ -171,6 +175,7 @@ body {
   width: 0;
   height: 1px;
   background-color: var(--text-color);
+  transition: var(--transition);
 }
 
 .link--hover:hover::after {
@@ -480,6 +485,7 @@ body {
   width: 50px;
   border-radius: 50px;
   box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
 .social__btn {
@@ -489,6 +495,7 @@ body {
 
 .social__description {
   font-size: 0;
+  transition: var(--transition);
 }
 
 .social__btn:hover .social__description {
@@ -520,6 +527,7 @@ body {
   width: 0;
   height: 0;
   border-radius: inherit;
+  transition: var(--transition);
 }
 
 .projects__preview:hover .projects__overlay {
@@ -564,6 +572,7 @@ body {
   height: 26px;
   border-radius: 50px;
   border: 3px solid var(--accent-color);
+  transition: var(--transition);
 }
 
 .timeline__description {
@@ -585,6 +594,7 @@ body {
   height: 100%;
   width: 1px;
   background-color: #d7dce2;
+  transition: var(--transition);
 }
 
 .timeline__item:not(:last-child) .timeline__description::after {
@@ -675,6 +685,7 @@ body {
   height: 2px;
   background: #414141;
   border-radius: 10px;
+  transition: var(--transition);
 }
 
 .hamb__line--top {
