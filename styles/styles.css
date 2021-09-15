@@ -484,8 +484,22 @@ body {
 
 .social__btn {
   width: auto;
-  min-width: 50px;
   margin: 10px;
+}
+
+.social__description {
+  font-size: 0;
+}
+
+.social__btn:hover .social__description {
+  margin-left: 10px;
+  font-size: inherit;
+}
+
+@media (max-width: 992px) {
+  .social__btn:hover .social__description {
+    display: none;
+  }
 }
 
 .social__icon {
@@ -530,21 +544,6 @@ body {
 
 .video__btn:hover {
   transform: scale(1.1);
-}
-
-.social__description {
-  display: none;
-  margin-left: 10px;
-}
-
-.social__btn:hover .social__description {
-  display: block;
-}
-
-@media (max-width: 992px) {
-  .social__btn:hover .social__description {
-    display: none;
-  }
 }
 
 .timeline {
