@@ -35,9 +35,11 @@ hamb.addEventListener('click', () => {
 
 menu.addEventListener('click', (event) => {
   let link = event.target.closest('.js-menu-link');
+  let menuIsOpen = event.currentTarget.classList.contains('active');
+  let overlay = !event.target.closest('.page-menu');
 
-  if (event.currentTarget.classList.contains('active') && link) {
-    toggleWindow(hamb, menu);
+  if ((menuIsOpen && link) || (menuIsOpen && overlay)) {
+    toggleWindow(hamb, event.currentTarget);
   };
 })
 

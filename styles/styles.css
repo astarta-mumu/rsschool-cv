@@ -95,29 +95,46 @@ body {
   align-items: center;
 }
 
-.page-nav {
-  display: flex;
-  justify-content: flex-end;
+.page-header__nav {
+  z-index: 2;
   transition: var(--transition);
 }
 
+.page-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media (max-width: 992px) {
-  .page-nav {
+  .page-header__nav {
     position: fixed;
     top: 0;
     left: -200%;
     height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .page-header__nav.active {
+    left: 0;
+  }
+
+  .page-menu {
     max-width: 320px;
+    height: 100%;
     padding: 20px;
     justify-content: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
     background-color: #ffffff;
     box-shadow: var(--shadow);
-    z-index: 2;
   }
-  .page-nav.active {
-    left: 0;
+}
+
+@media (max-width: 560px) {
+  .page-menu {
+    max-width: 100%;
+    padding: 20px calc((100% - 280px) / 2);
   }
 }
 
@@ -180,7 +197,7 @@ body {
   width: 100%;
 }
 
-.page-nav__item {
+.page-menu__item {
   margin-left: 60px;
 }
 
@@ -188,38 +205,37 @@ body {
   margin-left: 15px;
 }
 
-.page-nav__link {
+.page-menu__link {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.page-nav__link svg {
+.page-menu__link svg {
   display: none;
   margin-bottom: 10px;
 }
 
 @media (max-width: 992px) {
-  .page-nav__item {
+  .page-menu__item {
     margin-left: 0;
-    flex-grow: 1;
-    flex-basis: 50%;
   }
-  .page-nav__item:last-child {
+  .page-menu__item:last-child {
     margin: 0;
   }
-  .page-nav__link {
-    padding: 15px 20px;
+  .page-menu__link {
+    width: 140px;
+    padding: 15px 0;
     border-radius: 20px;
   }
-  .page-nav__link::after {
+  .page-menu__link::after {
     display: none;
   }
-  .page-nav__link:hover {
+  .page-menu__link:hover {
     background-color: var(--accent-color);
     box-shadow: var(--shadow);
   }
-  .page-nav__link svg {
+  .page-menu__link svg {
     display: block;
   }
 }
@@ -536,15 +552,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.video {
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-
 .video__btn {
   width: 90px;
   height: 90px;
+  margin-top: 30px;
   background-color: var(--accent-color);
 }
 
