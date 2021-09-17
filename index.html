@@ -509,9 +509,13 @@
     </a>
   </footer>
   <div class="modal js-window-video">
-    <iframe name="player" width="560" height="315" src="https://www.youtube.com/embed/HwQs8Jdv1LA?enablejsapi=1"
-      title="YouTube video player"
-      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+    <div class="player-wrapper">
+      <div class="player card">
+        <iframe class="player__video" title="YouTube video player"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen></iframe>
+      </div>
+    </div>
     <div class="btn hamb modal__close">
       <span class="hamb__line hamb__line--top"></span>
       <span class="hamb__line hamb__line--bottom"></span>

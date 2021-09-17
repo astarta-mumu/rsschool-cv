@@ -30,13 +30,11 @@ button {
   --accent-color: #f6a383;
   --page-bg-color: #f5f8fc;
   --secondary-bg-color: --text-color;
-
   --font-size: 16px;
   --small-font-size: 0.75rem;
   --title-font-size: 2rem;
   --big-title-font-size: 3rem;
   --small-title-font-size: 1.25rem;
-
   --shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s;
   --page-padding: calc(50vw - 590px);
@@ -725,9 +723,34 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal.active {
   display: flex;
+}
+
+.player-wrapper {
+  width: 500px;
+  max-width: 500px;
+}
+
+.player {
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.player__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

@@ -26,6 +26,7 @@ let menu = document.querySelector('.js-menu');
 function toggleWindow(btn, window) {
   btn.classList.toggle('active');
   window.classList.toggle('active');
+  document.body.classList.toggle('no-scroll');
 }
 
 hamb.addEventListener('click', () => {
@@ -44,12 +45,16 @@ menu.addEventListener('click', (event) => {
 
 let videoBtn = document.querySelector('.js-video');
 let videoWindow = document.querySelector('.js-window-video');
+let video = videoWindow.querySelector('.player__video');
+let videoSource = 'https://www.youtube.com/embed/HwQs8Jdv1LA';
 
 
-videoBtn.addEventListener('click', () => {
-  toggleWindow(videoBtn, videoWindow);
+videoBtn.addEventListener('click', (event) => {
+  video.setAttribute('src', videoSource);
+  toggleWindow(event.currentTarget, videoWindow);
 })
 
-videoWindow.addEventListener('click', () => {
-  toggleWindow(videoBtn, videoWindow);
+videoWindow.addEventListener('click', (event) => {
+  video.removeAttribute('src');
+  toggleWindow(videoBtn, event.currentTarget);
 })
