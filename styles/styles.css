@@ -23,6 +23,11 @@ button {
   cursor: pointer;
 }
 
+code, pre, pre code {
+  white-space: pre-wrap;
+  word-break: break-all;
+} 
+
 /* Variables */
 
 :root {
@@ -30,13 +35,11 @@ button {
   --accent-color: #f6a383;
   --page-bg-color: #f5f8fc;
   --secondary-bg-color: --text-color;
-
   --font-size: 16px;
   --small-font-size: 0.75rem;
   --title-font-size: 2rem;
   --big-title-font-size: 3rem;
   --small-title-font-size: 1.25rem;
-
   --shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s;
   --page-padding: calc(50vw - 590px);
@@ -97,29 +100,47 @@ body {
   align-items: center;
 }
 
-.page-nav {
-  display: flex;
-  justify-content: flex-end;
+.page-header__nav {
+  z-index: 2;
   transition: var(--transition);
 }
 
+.page-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media (max-width: 992px) {
-  .page-nav {
+  .page-header {
+    padding: 20px;
+  }
+  .page-header__nav {
     position: fixed;
     top: 0;
     left: -200%;
     height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .page-header__nav.active {
+    left: 0;
+  }
+  .page-menu {
     max-width: 320px;
+    height: 100%;
     padding: 20px;
     justify-content: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
     background-color: #ffffff;
     box-shadow: var(--shadow);
-    z-index: 2;
   }
-  .page-nav.active {
-    left: 0;
+}
+
+@media (max-width: 560px) {
+  .page-menu {
+    max-width: 100%;
+    padding: 20px calc((100% - 280px) / 2);
   }
 }
 
@@ -182,7 +203,7 @@ body {
   width: 100%;
 }
 
-.page-nav__item {
+.page-menu__item {
   margin-left: 60px;
 }
 
@@ -190,38 +211,37 @@ body {
   margin-left: 15px;
 }
 
-.page-nav__link {
+.page-menu__link {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.page-nav__link svg {
+.page-menu__link svg {
   display: none;
   margin-bottom: 10px;
 }
 
 @media (max-width: 992px) {
-  .page-nav__item {
+  .page-menu__item {
     margin-left: 0;
-    flex-grow: 1;
-    flex-basis: 50%;
   }
-  .page-nav__item:last-child {
+  .page-menu__item:last-child {
     margin: 0;
   }
-  .page-nav__link {
-    padding: 15px 20px;
+  .page-menu__link {
+    width: 140px;
+    padding: 15px 0;
     border-radius: 20px;
   }
-  .page-nav__link::after {
+  .page-menu__link::after {
     display: none;
   }
-  .page-nav__link:hover {
+  .page-menu__link:hover {
     background-color: var(--accent-color);
     box-shadow: var(--shadow);
   }
-  .page-nav__link svg {
+  .page-menu__link svg {
     display: block;
   }
 }
@@ -344,8 +364,8 @@ body {
   }
 }
 
-.code {
-  height: 780px;
+.code-wrapper {
+  min-height: 700px;
 }
 
 .tags {
@@ -538,15 +558,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.video {
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-
 .video__btn {
   width: 90px;
   height: 90px;
+  margin-top: 30px;
   background-color: var(--accent-color);
 }
 
@@ -725,9 +740,81 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal.active {
   display: flex;
+}
+
+.player-wrapper {
+  width: 500px;
+  max-width: 500px;
+}
+
+.player {
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.player__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+}
+
+.hamb.active .hamb__line--middle {
+  opacity: 0;
+}
+
+.hamb.active .hamb__line--bottom, .modal__close .hamb__line--bottom {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.modal {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.player-wrapper {
+  width: 500px;
+  max-width: 500px;
+}
+
+.player {
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.player__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

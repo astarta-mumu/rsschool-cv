@@ -17,10 +17,10 @@
 
 <body>
   <header class="page-header">
-    <nav>
-      <ul class="page-nav js-menu">
-        <li class="page-nav__item">
-          <a class="link page-nav__link link--hover js-menu-link" href="#summary">
+    <nav class="page-header__nav js-menu">
+      <ul class="page-menu">
+        <li class="page-menu__item">
+          <a class="link page-menu__link link--hover js-menu-link" href="#summary">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path
@@ -36,8 +36,8 @@
             Summary
           </a>
         </li>
-        <li class="page-nav__item">
-          <a class="link page-nav__link link--hover js-menu-link" href="#skills">
+        <li class="page-menu__item">
+          <a class="link page-menu__link link--hover js-menu-link" href="#skills">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path
@@ -53,8 +53,8 @@
             Skills
           </a>
         </li>
-        <li class="page-nav__item">
-          <a class="link page-nav__link link--hover js-menu-link" href="#languages">
+        <li class="page-menu__item">
+          <a class="link page-menu__link link--hover js-menu-link" href="#languages">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path
@@ -70,8 +70,8 @@
             Languages
           </a>
         </li>
-        <li class="page-nav__item">
-          <a class="link page-nav__link link--hover js-menu-link" href="#projects">
+        <li class="page-menu__item">
+          <a class="link page-menu__link link--hover js-menu-link" href="#projects">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12.23 15.5C5.429 15.5 1.863 14.279 0 12.903V22H24V13.051C20.782 15.272 14.578 15.5 12.23 15.5ZM14 18.032C14 19.119 13.104 20 12 20C10.896 20 10 19.119 10 18.032V17H14V18.032ZM0 9.491V7H24V9.605C24 14.894 0 14.738 0 9.491ZM9 2C7.896 2 7 2.896 7 4V6H9V4.5C9 4.224 9.224 4 9.5 4H14.5C14.776 4 15 4.224 15 4.5V6H17V4C17 2.896 16.104 2 15 2H9Z"
@@ -80,8 +80,8 @@
             Projects
           </a>
         </li>
-        <li class="page-nav__item">
-          <a class="link page-nav__link link--hover js-menu-link" href="#education">
+        <li class="page-menu__item">
+          <a class="link page-menu__link link--hover js-menu-link" href="#education">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path
@@ -97,8 +97,8 @@
             Education
           </a>
         </li>
-        <li class="page-nav__item">
-          <a class="link page-nav__link link--hover js-menu-link" href="#code-example">
+        <li class="page-menu__item">
+          <a class="link page-menu__link link--hover js-menu-link" href="#code-example">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M24 10.935V13.066L16 17.013V14.783L21.64 12L16 9.21V6.987L24 10.935ZM8 14.783L2.36 12L8 9.21V6.987L0 10.935V13.066L8 17.013V14.783ZM15.047 4H12.969L8.958 20H11.031L15.047 4V4Z"
@@ -108,12 +108,12 @@
           </a>
         </li>
       </ul>
-      <div class="btn hamb js-hamb">
-        <span class="hamb__line hamb__line--top"></span>
-        <span class="hamb__line hamb__line--middle"></span>
-        <span class="hamb__line hamb__line--bottom"></span>
-      </div>
     </nav>
+    <div class="btn hamb js-hamb">
+      <span class="hamb__line hamb__line--top"></span>
+      <span class="hamb__line hamb__line--middle"></span>
+      <span class="hamb__line hamb__line--bottom"></span>
+    </div>
   </header>
   <main>
     <div class="container">
@@ -127,16 +127,14 @@
               a
               junior
               developer. My appetites are much bigger than that.</p>
-            <div class="video">
-              <button class="btn video__btn js-video">
-                <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M14.6001 8.77635L1.64851 0.230401C0.880163 -0.193299 0 -0.149333 0 1.37239V18.2004C0 19.5909 0.944258 19.8108 1.64851 19.3424L14.6008 10.7965C15.1332 10.238 15.1332 9.33408 14.6001 8.77635Z"
-                    fill="white" />
-                </svg>
+            <button class="btn video__btn js-video">
+              <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.6001 8.77635L1.64851 0.230401C0.880163 -0.193299 0 -0.149333 0 1.37239V18.2004C0 19.5909 0.944258 19.8108 1.64851 19.3424L14.6008 10.7965C15.1332 10.238 15.1332 9.33408 14.6001 8.77635Z"
+                  fill="white" />
+              </svg>
 
-              </button>
-            </div>
+            </button>
           </div>
           <div class="layout-col">
             <figure class="photo">
@@ -178,8 +176,8 @@
                 </span>
 
               </a></li>
-            <li><a class="btn social__btn" href="https://discordapp.com/users/8366" target="_blank">
-                <span class="social__description">@astarta#9304</span>
+            <li><a class="btn social__btn" href="https://discordapp.com/users/883667334621978634" target="_blank">
+                <span class="social__description">@Mumu#8366</span>
                 <span class="social__icon">
                   <svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -414,16 +412,16 @@
         </ul>
       </section>
 
-      <section class="section line-numbers" id="code-example">
+      <section class="section" id="code-example">
         <h2 class="title section__title">Code Example</h2>
-        <div class="card code">
+        <div class="card code-wrapper">
           <div class="card__inner">
             <div class="tab-container">
               <div class="tab js-tab-btn active">HTML</div>
               <div class="tab js-tab-btn">CSS</div>
               <div class="tab js-tab-btn">JavaScript</div>
             </div>
-            <pre class="tab-content js-tab-content active"><code class="language-html">
+            <pre class="code tab-content js-tab-content active"><code class="language-html">
               &lt;nav&gt;
               &lt;ul class="page-nav"&gt;
                 &lt;li class="page-nav__item"&gt;
@@ -451,7 +449,7 @@
                 &lt;span class="hamb__line hamb__line--bottom"&gt;&lt;/span&gt;
               &lt;/div&gt;
             &lt;/nav&gt;</code></pre>
-            <pre class="tab-content js-tab-content"><code class="language-css">
+            <pre class="code tab-content js-tab-content"><code class="language-css">
               .page-nav {
               display: flex;
               justify-content: flex-end;
@@ -476,7 +474,7 @@
                 left: 0;
               }
             }</code></pre>
-            <pre class="tab-content js-tab-content"><code class="language-javascript">
+            <pre class="code tab-content js-tab-content"><code class="language-javascript">
               let hamb = document.querySelector('.hamb');
               let menu = document.querySelector('.page-nav');
               
@@ -509,9 +507,13 @@
     </a>
   </footer>
   <div class="modal js-window-video">
-    <iframe name="player" width="560" height="315" src="https://www.youtube.com/embed/HwQs8Jdv1LA?enablejsapi=1"
-      title="YouTube video player"
-      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+    <div class="player-wrapper">
+      <div class="player card">
+        <iframe class="player__video" title="YouTube video player"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen></iframe>
+      </div>
+    </div>
     <div class="btn hamb modal__close">
       <span class="hamb__line hamb__line--top"></span>
       <span class="hamb__line hamb__line--bottom"></span>
