@@ -42,21 +42,3 @@ menu.addEventListener('click', (event) => {
     toggleWindow(hamb, event.currentTarget);
   };
 })
-
-// Modal window with video
-
-let videoBtn = document.querySelector('.js-video');
-let videoWindow = document.querySelector('.js-window-video');
-let video = videoWindow.querySelector('.player__video');
-let videoSource = 'https://www.youtube.com/embed/HwQs8Jdv1LA';
-
-
-videoBtn.addEventListener('click', (event) => {
-  video.setAttribute('src', videoSource);
-  toggleWindow(event.currentTarget, videoWindow);
-})
-
-videoWindow.addEventListener('click', (event) => {
-  video.removeAttribute('src');
-  toggleWindow(videoBtn, event.currentTarget);
-})
