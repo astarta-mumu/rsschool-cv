@@ -509,32 +509,15 @@ body {
 }
 
 .social__btn {
-  width: auto;
-  margin: 10px;
-}
-
-.social__description {
-  font-size: 0;
-  transition: var(--transition);
-}
-
-.social__btn:hover .social__description {
-  margin-left: 10px;
-  font-size: inherit;
-}
-
-@media (max-width: 992px) {
-  .social__btn:hover .social__description {
-    display: none;
-  }
-}
-
-.social__icon {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  margin: 10px;
+  transition: var(--transition);
+}
+
+.social__btn:hover {
+  transform: scale(1.1);
 }
 
 .projects__overlay {
