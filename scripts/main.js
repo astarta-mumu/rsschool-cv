@@ -43,20 +43,19 @@ menu.addEventListener('click', (event) => {
   };
 })
 
-// Modal window with video
-
-let videoBtn = document.querySelector('.js-video');
-let videoWindow = document.querySelector('.js-window-video');
-let video = videoWindow.querySelector('.player__video');
-let videoSource = 'https://www.youtube.com/embed/HwQs8Jdv1LA';
-
-
-videoBtn.addEventListener('click', (event) => {
-  video.setAttribute('src', videoSource);
-  toggleWindow(event.currentTarget, videoWindow);
-})
-
-videoWindow.addEventListener('click', (event) => {
-  video.removeAttribute('src');
-  toggleWindow(videoBtn, event.currentTarget);
-})
+console.log(`150/160
+- верстка валидная (+10)
+- верстка семантическая, больше 10 тегов (+20)
+- для оформления СV используются css-стили (+10)
+- контент размещается в блоке, который горизонтально центрируется на странице. Фоновый цвет, если он есть, тянется во всю ширину страницы (+10)
+- вёрстка адаптивная до 320px (+10)
+- адаптивное бургер-меню (+10)
+- есть аватарка, alt тоже (+10)
+- контакты для связи и перечень навыков в виде ul>li (+10)
+- CV содержит контакты для связи, краткую информацию о себе, перечень навыков, информацию об образовании и уровне английского (+10)
+- CV содержит пример кода с подсветкой (+10)
+- CV содержит изображения-ссылки на выполненные вами проекты. При клике по изображению страница проекта открывается в новой вкладке. У каждого проекта есть название, небольшое описание, указан перечень используемых технологий (+10)
+- CV выполнено на английском языке (+10)
+- выполнены требования к Pull Request: https://github.com/astarta-mumu/rsschool-cv/pull/3 (+10)
+- видеорезюме (0)
+- оформление (+10)`);
